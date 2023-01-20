@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import useGeolocation from "react-hook-geolocation";
+import Forecast from "./components/weather";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => {
+  const [weather, setWeather] = useState();
+  const { latitude, longitude } = useGeolocation();
+  
+  const getWeatherData = async (lat, lon) => {
+    const key = process.env.REACT_APP_WEATHER_API_KEY;
+    
+    try {
+      const { data } = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`
+        );
+        setWeather(data);
+      } catch {
+      alert("Could not get the data.");
+    }
+  };
+  useEffect(() => {
+    latitude && longitude && getWeatherData(latitude, longitude);
+  }, [latitude, longitude])
+  
+  return <div>
+    <Forecast weather={weather} />
+  </div>
+};
 
 export default App;
