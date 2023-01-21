@@ -1,18 +1,40 @@
 body {
-    background: radial-gradient(circle, rgba(189,195,199,1) 0%, rgba(44,62,80,1) 100%);
+    /* background: radial-gradient(circle, rgba(189,195,199,1) 0%, rgba(44,62,80,1) 100%); */
+    background: radial-gradient(circle, rgba(41,128,185,1) 0%, rgba(109,213,250,1) 50%, rgba(255,255,255,1) 100%);
 }
 
 
-#weatherCard {
+#Turkey {
     position: relative;
     display:flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url("./galata_morning.jpg");
+    background-image: url("./backgrounds/galata_morning.jpg"); 
     background-size: cover;
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 25px 30px rgba(65, 65, 65, 1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+    margin: auto;
+    margin-top: 5%;
+    height: 80vh;
+    width: 24%;
+    /* padding: 20px 30px 70px 30px; */
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#Germany {
+    position: relative;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("./backgrounds/frankfurt.jpg"); 
+    background-size: cover;
+    border-radius: 16px;
+    box-shadow: 0 25px 30px rgba(65, 65, 65, 1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     color: white;
@@ -39,9 +61,14 @@ body {
     margin-bottom: 30px;
 }
 
-/* #loading {
-    color: blueviolet;
-    display: flex;
-    align-items: center;
+#weatherDescription {
+    top: -15px;
+    left: 15px;
+    position: relative;
+} 
 
-} */
+#air_icon {
+    position: relative;
+    top: 16px;
+    /* left: 15px; */
+} 
