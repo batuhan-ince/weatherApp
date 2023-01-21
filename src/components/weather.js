@@ -31,7 +31,7 @@ const Forecast = (props) => {
     
     let air_icon = `http://openweathermap.org/img/wn/${descriptionIcons[weather.weather[0].description]}`
 
-    return <div id={background[weather.sys.country]}>
+    return <div id="Germany">
         <section id="weatherInfo">
             <h3>{weather.name}</h3>
             <p>{Math.round(weather.main.temp)}°C (Feels Like: {Math.round(weather.main.feels_like)}°C)</p>
