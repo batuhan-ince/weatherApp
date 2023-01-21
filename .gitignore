@@ -7,6 +7,10 @@
 .env
 /src/backgrounds
 /src/components/icons
+.firebaserc
+.firebase
+.github
+firebase.json
 # testing
 /coverage
 
