@@ -10,6 +10,7 @@ body {
 
 #Turkey {
   position: relative;
+  /* left: -600px; */
   display: flex;
   align-items: center;
   flex-direction: column;

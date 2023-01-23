@@ -13,10 +13,11 @@ const Forecast = (props) => {
     "scattered clouds": "03d.png",
     "broken clouds": "04d.png",
     "shower rain": "09d.png",
-    rain: "10d.png",
-    thunderstorm: "11d.png",
-    snow: "13d.png",
-    mist: "50d.png",
+    "rain": "10d.png",
+    "thunderstorm": "11d.png",
+    "snow": "13d.png",
+    "mist": "50d.png",
+    "overcast clouds": "03d.png",
   };
 
   if (!weather) {
@@ -40,9 +41,9 @@ const Forecast = (props) => {
     descriptionIcons[weather.weather[0].description]
   }`;
   return (
-    <div id={background[weather.sys.country]}>
+    <div>
+        <div id={background[weather.sys.country]}>
       <section id="weatherInfo" >
-        
         <h3>{weather.name}</h3>
         <p>
           {Math.round(weather.main.temp)}°C (Feels Like:{" "}
@@ -58,6 +59,7 @@ const Forecast = (props) => {
           {new Date(weather.dt * 1000).toLocaleDateString("en-US", options)}
         </p>
       </section>
+    </div>
     </div>
   );
 };
