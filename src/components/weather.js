@@ -1,3 +1,5 @@
+import jsonData from "./descriptions.json"
+
 const Forecast = (props) => {
   const { weather } = props;
   const options = {
@@ -7,38 +9,32 @@ const Forecast = (props) => {
     day: "numeric",
   };
 
-  const descriptionIcons = {
-    "clear sky": "01d.png",
-    "few clouds": "02d.png",
-    "scattered clouds": "03d.png",
-    "broken clouds": "04d.png",
-    "shower rain": "09d.png",
-    "rain": "10d.png",
-    "thunderstorm": "11d.png",
-    "snow": "13d.png",
-    "mist": "50d.png",
-    "overcast clouds": "03d.png",
-  };
+//   const descriptionIcons = {
+//     "clear sky": {icon: "01d.png", maxValence: 1, minValence: 0.9},
+//     "few clouds": "02d.png",
+//     "scattered clouds": "03d.png",
+//     "broken clouds": "04d.png",
+//     "shower rain": "09d.png",
+//     "rain": "10d.png",
+//     "thunderstorm": "11d.png",
+//     "snow": "13d.png",
+//     "mist": "50d.png",
+//     "overcast clouds": "03d.png",
+//   };
+
+//   console.log(jsonData["clear sky"]["max_valence"])
 
   if (!weather) {
     return <p id="loading">Loading...</p>;
   }
-
-  const randomBackground = (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)];
-  }
-
-  const list = [1,2,3,4,5];
-  console.log(randomBackground(list))
-
-
+//   console.log(weather)
   const background = {
     TR: "Turkey",
     DE: "Germany",
   };
 
   let air_icon = `http://openweathermap.org/img/wn/${
-    descriptionIcons[weather.weather[0].description]
+    jsonData[weather.weather[0].description]["icon"]
   }`;
   return (
     <div>

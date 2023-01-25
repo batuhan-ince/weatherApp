@@ -1,0 +1,52 @@
+{
+    "clear sky": {
+        "icon": "01d.png",
+        "max_valance": 1,
+        "target_valance": 0.9
+    },
+    "few clouds": {
+        "icon": "02d.png",
+        "max_valance": 0.89,
+        "target_valance": 0.8
+    },
+    "scattered clouds": {
+        "icon": "03d.png",
+        "max_valance": 0.79,
+        "target_valance": 0.7
+    },
+    "broken clouds": {
+        "icon": "04d.png",
+        "max_valance": 0.69,
+        "target_valance": 0.6
+    },
+    "shower rain": {
+        "icon": "09d.png",
+        "max_valance": 1,
+        "target_valance": 0.5
+    },
+    "rain": {
+        "icon": "10d.png",
+        "max_valance": 1,
+        "target_valance": 0.4
+    },
+    "thunderstorm": {
+        "icon": "11d.png",
+        "max_valance": 1,
+        "target_valance": 0.9
+    },
+    "snow": {
+        "icon": "13d.png",
+        "max_valance": 1,
+        "target_valance": 0.9
+    },
+    "mist": {
+        "icon": "50d.png",
+        "max_valance": 1,
+        "target_valance": 0.9
+    },
+    "overcast clouds": {
+        "icon": "03d.png",
+        "max_valance": 1,
+        "target_valance": 0.9
+    }
+}
