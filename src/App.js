@@ -22,6 +22,19 @@ const App = () => {
   const targetValance = 0.7
   // console.log(airDescription[weather.weather[0].description].target_valance)
 
+  const getWeatherData = async (lat, lon) => {
+    const key = process.env.REACT_APP_WEATHER_API_KEY;
+    
+    try {
+      const { data } = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`
+      );
+    setWeather(data);
+  } catch {
+    alert("Could not get the data.");
+  }
+};
+
   const getRecommendations = async (valance) => {
       const trackList = [];
       const response1 = await axios({
@@ -39,39 +52,24 @@ const App = () => {
         });
       let token = response1.data.access_token;
 
-      fetch(`${endpoint}?seed_artists=${artists}&target_valance=${valance}`, {
+      const response2 = await axios ({
+        url: `${endpoint}?limit=1&seed_artists=${artists}&max_valance=${0.7}`,
         method: "GET",
         headers: {
             Authorization: `Bearer ${token}`
         }
       })
-      .then(response => response.json())
-      .then(({tracks}) => {
-        trackList.push(tracks)
-          setSongs(trackList)
-        })
+      setSongs(response2)
     }
-    
-    const getWeatherData = async (lat, lon) => {
-      const key = process.env.REACT_APP_WEATHER_API_KEY;
-      
-      try {
-        const { data } = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`
-        );
-      setWeather(data);
-    } catch {
-      alert("Could not get the data.");
-    }
-  };
+  
+    useEffect(() => {
+      latitude && longitude && getWeatherData(latitude, longitude);
+    }, [latitude, longitude]);
   useEffect(() => {
     getRecommendations(targetValance);
   // eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    latitude && longitude && getWeatherData(latitude, longitude);
-  }, [latitude, longitude]);
   
 
   return (
