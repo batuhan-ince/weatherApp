@@ -5,7 +5,6 @@ import useGeolocation from "react-hook-geolocation";
 import Forecast from "./components/weather";
 import Recommend from "./spotify";
 import { Buffer } from 'buffer';
-import jsonData from "./components/descriptions.json"
 
 
 
@@ -18,8 +17,7 @@ const App = () => {
   const { latitude, longitude } = useGeolocation();
 
   const [songs, setSongs] = useState();
-  const airDescription = structuredClone(jsonData)
-  const targetValance = 0.7
+  const targetValance = 0.4
   // console.log(airDescription[weather.weather[0].description].target_valance)
 
   const getWeatherData = async (lat, lon) => {
@@ -36,7 +34,6 @@ const App = () => {
 };
 
   const getRecommendations = async (valance) => {
-      const trackList = [];
       const response1 = await axios({
         url: "https://accounts.spotify.com/api/token",
         method: "POST",
@@ -53,7 +50,7 @@ const App = () => {
       let token = response1.data.access_token;
 
       const response2 = await axios ({
-        url: `${endpoint}?limit=1&seed_artists=${artists}&max_valance=${0.7}`,
+        url: `${endpoint}?limit=1&seed_artists=${artists}&max_valance=${valance}`,
         method: "GET",
         headers: {
             Authorization: `Bearer ${token}`

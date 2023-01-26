@@ -11,6 +11,7 @@ body {
 #Turkey {
   position: relative;
   /* left: -600px; */
+  top: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,11 +22,11 @@ body {
   box-shadow: 0 25px 30px rgba(65, 65, 65, 1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  color: white;
+  color: black;
   margin: auto;
-  margin-top: 5%;
-  margin-right: 0;
-  margin-left: 100px;
+  /* margin-top: 5%; */
+  /* margin-right: 0;
+  margin-left: 100px; */
   height: 80vh;
   width: 24%;
   /* padding: 20px 30px 70px 30px; */
@@ -45,7 +46,7 @@ body {
   box-shadow: 0 25px 30px rgba(65, 65, 65, 1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  color: white;
+  color: black;
   margin: auto;
   margin-top: 5%;
   height: 80vh;
@@ -55,6 +56,8 @@ body {
 }
 
 #weatherInfo {
+  position: relative;
+  top: -550px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -95,4 +98,10 @@ body {
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#player {
+  position: relative;
+  left: 750px;
+  top: -300px;
 }
