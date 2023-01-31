@@ -1,4 +1,5 @@
 import jsonData from "./descriptions.json"
+import Recommend from "../spotify";
 
 const Forecast = (props) => {
   const { weather } = props;
@@ -19,7 +20,7 @@ const Forecast = (props) => {
 //     "thunderstorm": "11d.png",
 //     "snow": "13d.png",
 //     "mist": "50d.png",
-//     "overcast clouds": "03d.png",
+//     "overcast clouds":f "03d.png",
 //   };
 
 //   console.log(jsonData["clear sky"]["max_valence"])
