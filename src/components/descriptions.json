@@ -1,52 +1,72 @@
 {
     "clear sky": {
         "icon": "01d.png",
-        "max_valance": 1,
-        "target_valance": 0.9
+        "target_valance": 1,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "few clouds": {
         "icon": "02d.png",
-        "max_valance": 0.89,
-        "target_valance": 0.8
+        "target_valance": 0.8,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "scattered clouds": {
         "icon": "03d.png",
-        "max_valance": 0.79,
-        "target_valance": 0.7
+        "target_valance": 0.7,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "broken clouds": {
         "icon": "04d.png",
-        "max_valance": 0.69,
-        "target_valance": 0.6
+        "target_valance": 0.6,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "shower rain": {
         "icon": "09d.png",
-        "max_valance": 1,
-        "target_valance": 0.5
+        "target_valance": 0.3,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "rain": {
         "icon": "10d.png",
-        "max_valance": 1,
-        "target_valance": 0.4
+        "target_valance": 0.4,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "thunderstorm": {
         "icon": "11d.png",
-        "max_valance": 1,
-        "target_valance": 0.9
+        "target_valance": 0.1,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "snow": {
         "icon": "13d.png",
-        "max_valance": 1,
-        "target_valance": 0.9
+        "target_valance": 0.9,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "mist": {
         "icon": "50d.png",
-        "max_valance": 1,
-        "target_valance": 0.9
+        "target_valance": 0.3,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     },
     "overcast clouds": {
         "icon": "03d.png",
-        "max_valance": 1,
-        "target_valance": 0.9
+        "target_valance": 0.65,
+        "target_energy": 1,
+        "target_liveness": 1,
+        "target_dancebility": 1
     }
 }
