@@ -60,7 +60,7 @@ const App = () => {
     });
     let token = response1.data.access_token;
     const response2 = await axios({
-      url: `${endpoint}?limit=1&seed_genres=${'jazz,rock,pop,metal,electronic'}&max_valance=${targetValance}&max_danceability=${targetDancebility}&max_energy=${targetEnergy}&max_liveness=${targetLiveness}`,
+      url: `${endpoint}?limit=1&seed_genres=${'jazz,rock,pop,metal,electronic'}&target_valance=${targetValance}&target_danceability=${targetDancebility}&target_energy=${targetEnergy}&target_liveness=${targetLiveness}`,
       // &max_danceability=${targetDancebility}&max_energy=${targetEnergy}&max_liveness=${targetLiveness}
       method: "GET",
       headers: {
