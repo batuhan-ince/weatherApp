@@ -9,6 +9,7 @@
     ); */
     /* background: linear-gradient(0deg, rgba(58,28,113,1) 0%, rgba(215,109,119,1) 50%, rgba(255,175,123,1) 100%); */
     background: #001a33;
+    overflow-y: hidden;
   }
 
   #background {
@@ -27,6 +28,7 @@
     -webkit-backdrop-filter: blur(5px);
     color: black;
     margin: auto;
+    margin-top: 4rem;
     height: 85vh;
     width: 100%;
     font-family: "Space Grotesk", sans-serif;
@@ -95,6 +97,7 @@
     background: #001a33;
 
     max-height: 100vh;
+    overflow-y: hidden;
   }
 
   #background {
@@ -179,6 +182,7 @@
     background: #001a33;
 
     max-height: 100vh;
+    overflow-y: hidden;
   }
 
   #background {
@@ -197,6 +201,7 @@
     -webkit-backdrop-filter: blur(5px);
     color: black;
     margin: auto;
+    margin-top: 5rem;
     height: 85vh;
     width: 24%;
     font-family: "Space Grotesk", sans-serif;
